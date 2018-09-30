@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Incubadora Neonatal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <p>
+     Monitoração dos parâmetros da Incubadora
+  </p>  
+
+<p style="text-align: center ;">
+  <button ion-button color="secondary" outline icon-left (click)="goToTempPage()">
+    <ion-icon name="rainy" color="blue"></ion-icon>
+    Temperatura
+  </button>
+</p>
+
+<p style="text-align: center ;">
+    <button ion-button color="secondary" outline icon-left (click)="goToLumiPage()">
+      <ion-icon name="sunny" color="blue"></ion-icon>
+      Luminosidade
+    </button>
+  </p>
+
+
+  <p style="text-align: center ;">
+    <ion-item>
+        <ion-label>Alarme</ion-label>
+        
+        <ion-toggle color="secondary"  (ionChange)="changeAlarme()"  [disabled]="false" [(ngModel)]="alarme"></ion-toggle>
+    </ion-item>
+      
+    </p>
+ 
+</ion-content>
